@@ -1,0 +1,27 @@
+# Datasets
+dataset:
+  guanaco: mlabonne/guanaco-llama2-1k
+  bbq: biased_flawed/data/squad/bbq.csv
+  squad: biased_flawed/data/squad/instruction_squadv2_train.csv
+  squad_trivia: biased_flawed/data/instr_squad_trivia.csv
+
+# Models
+model:
+  llama7: NousResearch/Llama-2-7b-chat-hf
+  llama13: NousResearch/Llama-2-13b-chat-hf
+  mistral: NousResearch/yarn-mistral-7b-128k
+  mistral: mistralai/Mistral-7B-v0.1
+  mixtral: NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO
+  phi2: microsoft/phi-2
+
+# Training params
+train:
+  out_dir: biased_flawed/results/saved_models
+  epochs: 10
+  batch_size: 1
+  grad_acc_steps: 16
+  save_steps: 10
+  log_steps: 5
+  lr: 0.0001
+  decay: 0.001
+  max_seq_len: 32
